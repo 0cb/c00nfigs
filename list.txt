@@ -1,0 +1,7 @@
+#--------------- List of dotfiles ---------------#
+
+.bash_aliases
+.bashrc
+.fehbg
+.vimrc
+.Xresources

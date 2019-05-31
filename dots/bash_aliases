@@ -1,0 +1,80 @@
+#===========================================================================#
+#=									   =#
+#   Filename:	    .bash_aliases
+#   Version:	    2.0
+#=									   =#
+#   Description:    convoluted scribbles
+#
+#=  Author:	    0cb - Christian Bowman				   =#
+#   Creation:	    2018-06-30
+#   Updated:	    2019-05-31
+#=									   =#
+#===========================================================================#
+
+
+#--------------- editing ---------------#
+
+alias edal='vim ~/.bash_aliases && source ~/.bash_aliases && printf "\n.bash_aliases sourced\n"'
+alias edrc='vim ~/.bashrc && source ~/.bashrc && printf "\n.bashrc sourced\n"'
+alias edvim='vim ~/.vimrc'
+alias edsnip='vim ~/.vim/bundle/vim-snippets/UltiSnips/all.snippets'
+alias edsudo='vim $GIT/c00nfigs/bin/sudowudos.sh'
+
+#alias sshCluster='ssh -XY cbowm002@cluster.hpcc.ucr.edu'
+
+#--------------- GitHub ---------------#
+
+#0cb/<> git clone <shift+ins> https://github.com/0cb/<>.git
+# you'll need to git init into folders that are copied over with a .git
+alias gitrekt='cd ~/gitrekt'
+alias gitadd='rm *.~; git add .; git status; echo "git commit -m"'
+alias gitpush='git push -u origin master'
+
+alias githelp='echo "git add <file>; git commit -m '"'"'changes made'"'"'; git<repo>"; echo '"'"''"'"''
+
+#--------------- Quality of Life ---------------#
+
+alias ll='ls -al'
+alias ls='ls -a'
+alias rngpw='< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c13; echo ""'
+alias timeis='echo ""; date +%H:%M:%S; echo ""'
+#alias imagej='$HOME/Fiji.app/ImageJ-linux64'
+alias kill='kill -9'
+#alias kisnap='pidof snapgene'
+alias ssaver='xset s off -dpms'
+
+#--------------- Jumps ---------------#
+
+alias cdgit='cd ~/gitrekt'
+alias cdlab='cd ~/Baird_Lab'
+alias cdsnip='cd ~/.vim/bundle/vim-snippets/UltiSnips'
+alias cdbio='cd ~/Bioinf0cb'
+
+#--------------- Typos ---------------#
+
+alias :q='exit'
+alias quit='exit'
+alias logout='openbox --exit'    #log off openbox
+alias restart='shutdown -r'    #restarts computer- now you are on windows
+alias turnoff='shutdown'
+
+#------------------------Bioinformatics--------------------------
+
+
+#BLAST+ 2.6.0
+#alias BLASTmeTM='awk '"'"'FNR==3 {print ">"FILENAME; print $0}'"'"' *.tview.txt > $(date +%y_%m_%d).BLASTmeTM.$RANDOM.txt; cp *BLASTme*.txt ~/BLASTme'
+#alias BLASTmeIPCR='awk '"'"'FNR==1 {print ">" FILENAME; print $0}'"'"' *.seq > $(date +%y_%m_%d).BLASTmeIPCR.$RANDOM.txt; cp *BLASTme*.txt ~/BLASTme'
+#alias BLASTaaeg='cdblast; blastn -query *.txt -db BLASTdb/AaegL5 -out $(date +%y_%m_%d).BLASTresults.$RANDOM.txt -outfmt 7'
+
+#ver 1.0 (07.17)
+#alias TM_dsim='TM_Script ~/TagMap/TM_refGenome/Dsimv2_w501.fa' #Stern data
+#alias TM_aaeg1='bash TM_Script ~/TagMap/TM_refGenome/AaegL3_GCF4015-4.fna'
+#alias TM_aaeg2='bash TM_Script ~/TagMap/TM_refGenome/AaegL4_GSE95797.fasta'
+#alias TM_aaegr1='TM_Script ~/TagMap/TM_refGenome/AaegL5_GCF2204515-2.fna' #map to refGen
+#alias TM_aaegr2='TM_Script ~/TagMap/TM_refGenome/v1018b_pbac.fasta' #map to pbacTE
+
+#ver 1.1 (08.17)
+#alias TM_Pydsim='TM_Py ~/TagMap/TM_refGenome/Dsimv2_w501.fa'
+#alias TM_Pyaaegr1='TM_Py ~/TagMap/TM_refGenome/AaegL5_GCF2204515-2.fna'
+#alias TM_Pyaaegr2='TM_Py ~/TagMap/TM_refGenome/v1018b_pbac.fasta'
+

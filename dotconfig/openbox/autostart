@@ -1,0 +1,33 @@
+# compton
+compton --config ~/.config/compton.conf -Ccf --vsync opengl &
+
+# set the gamma
+xgamma -gamma 0.85 &
+
+# fonts
+fonts.sh &
+
+# touchpad
+touchpad.sh &
+
+# beep off
+xset -b &
+
+# urxvt daemon
+urxvtd &
+
+# set the background
+./.fehbg &
+
+
+# tint2
+#tint2 &
+
+# polybar
+./launch.sh
+
+# welcome message
+sleep 4s && notify-send "welcome to the world" &
+
+# dropbox daemon
+(sleep 10s && ~/.dropbox-dist/dropboxd) &
