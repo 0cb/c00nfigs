@@ -13,6 +13,17 @@
 #=									   =#
 #===========================================================================#
 
+#--------------- sudocheck ---------------#
+
+if [[ $(id -u) -ne 0 ]];
+then
+    printf "\nrerunning with 'sudo'\n"
+    sudo "$0"
+else
+    printf "\nStatus: $(id -u) \n"
+fi
+
+
 apt-get update
 apt-get upgrade -y
 
@@ -31,9 +42,14 @@ apt-get install rxvt-unicode vim ranger rofi
 printf "\ninstalling assthetic packages\n"
 apt-get install compton
 
+#--------------- applications ---------------#
+
+printf "\ninstalling applications packages\n"
+apt-get install gummi
+
 #--------------- misc ---------------#
 
 printf "\ninstalling misc packages\n"
-apt-get install pdfgrep
+apt-get install pdfgrep fonts-powerline
 
 
