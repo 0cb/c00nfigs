@@ -21,8 +21,9 @@ if [[ $(id -u) -ne 0 ]];
 then
     printf "\nrerunning with 'sudo'\n"
     sudo "$0"
-else
-    printf "\nStatus: $(id -u) \n"
+    exit $?
+#else
+#    printf "\nStatus: $(id -u) \n"
 fi
 
 #--------------- dependencies ---------------#
@@ -31,7 +32,7 @@ apt-get install git build-essential automake autoconf libtool pkg-config intltoo
 
 #--------------- building ---------------#
 
-cd ~/programs
+mkdir -p ~/programs; cd ~/programs
 git clone https://github.com/cboxdoerfer/fsearch.git
 cd fsearch
 

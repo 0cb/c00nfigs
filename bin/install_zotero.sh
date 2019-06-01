@@ -21,14 +21,15 @@ if [[ $(id -u) -ne 0 ]];
 then
     printf "\nrerunning with 'sudo'\n"
     sudo "$0"
-else
-    printf "\nStatus: $(id -u) \n"
+    exit $?
+#else
+#    printf "\nStatus: $(id -u) \n"
 fi
 
 #--------------- building ---------------#
 
-tar xvf zot*.tar
-mv Zot* /opt
+#tar xvf zot*.tar*
+mv Zotero_linux-x86_64 /opt
 sudo ln -s /opt/Zotero_linux-x86_64/zotero /usr/bin/zotero
 
 #--------------- confirmation ---------------#

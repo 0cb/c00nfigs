@@ -19,6 +19,7 @@ if [[ $(id -u) -ne 0 ]];
 then
     printf "\nrerunning with 'sudo'\n"
     sudo "$0"
+    exit $?
 else
     printf "\nStatus: $(id -u) \n"
 fi

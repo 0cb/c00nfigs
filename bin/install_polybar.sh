@@ -23,8 +23,9 @@ if [[ $(id -u) -ne 0 ]];
 then
     printf "\nrerunning with 'sudo'\n"
     sudo "$0"
-else
-    printf "\nStatus: "; id -u
+    exit $?
+#else
+#    printf "\nStatus: "; id -u
 fi
 
 #--------------- dependencies ---------------#
@@ -35,7 +36,7 @@ apt-get install libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev l
 #--------------- build ---------------#
 
 #tar xvf polybar-*.tar
-cd ~/programs
+mkdir -p ~/programs; cd ~/programs
 git clone --recursive https://github.com/polybar/polybar
 cd polybar
 mkdir build; cd build
