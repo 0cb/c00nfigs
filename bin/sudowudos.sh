@@ -17,7 +17,7 @@
 
 if [[ $(id -u) -ne 0 ]];
 then
-    printf "\nrerunning with 'sudo'\n"
+    printf "$RED \nrerunning with 'sudo'\n $NC"
     sudo "$0"
     exit $?
 else
@@ -30,27 +30,28 @@ apt-get upgrade -y
 
 #--------------- openbox ---------------#
 
-printf "\ninstalling openbox packages\n"
+printf "$RED \ninstalling openbox packages\n $NC"
 apt-get install openbox obconf feh
 
 #--------------- terminal ---------------#
 
-printf "\ninstalling terminal packages\n"
+printf "$RED \ninstalling terminal packages\n $NC"
 apt-get install rxvt-unicode vim ranger rofi
 
 #--------------- assthetic ---------------#
 
-printf "\ninstalling assthetic packages\n"
+printf "$RED \ninstalling assthetic packages\n $NC"
 apt-get install compton
 
 #--------------- applications ---------------#
 
-printf "\ninstalling applications packages\n"
+printf "$RED \ninstalling applications packages\n $NC"
 apt-get install gummi
+pip3 install pywal
 
 #--------------- misc ---------------#
 
-printf "\ninstalling misc packages\n"
-apt-get install pdfgrep fonts-powerline
+printf "$RED \ninstalling misc packages\n $NC"
+apt-get install pdfgrep fonts-powerline imagemagick
 
 
