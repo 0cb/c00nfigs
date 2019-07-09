@@ -5,3 +5,14 @@
 .fehbg
 .vimrc
 .Xresources
+
+#--------------- applications ---------------#
+
+zotero
+polybar
+discord
+phylip
+fsearch
+scihub.py
+PaperBot.py
+fiji	https://imagej.net/Fiji/Downloads#Installation
