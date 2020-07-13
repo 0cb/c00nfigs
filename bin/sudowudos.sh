@@ -59,5 +59,5 @@ apt-get install pdfgrep fonts-powerline imagemagick xterm libreoffice-java-commo
 #--------------- python3 ---------------#
 
 printf "$red \ninstalling python3 packages\n $end"
-pip3 install pywal beautifulsoup4 requests retrying pysocks subsample discord.py
+pip3 install pywal beautifulsoup4 requests retrying pysocks subsample discord.py pandas xlsxwriter
 
