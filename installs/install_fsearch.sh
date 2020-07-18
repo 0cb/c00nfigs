@@ -14,6 +14,10 @@
 #===========================================================================#
 
 # build instructions straight from: git clone https://github.com/cboxdoerfer/fsearch.git
+# PPA route:  
+#   sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily
+#   sudo apt-get update
+#   sudo apt install fsearch-trunk
 
 #--------------- sudocheck ---------------#
 

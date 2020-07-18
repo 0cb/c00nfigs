@@ -28,7 +28,7 @@ fi
 
 #--------------- building ---------------#
 
-#tar xvf zot*.tar*
+tar xvf Zot*.tar*
 mv Zotero_linux-x86_64 /opt
 sudo ln -s /opt/Zotero_linux-x86_64/zotero /usr/bin/zotero
 
